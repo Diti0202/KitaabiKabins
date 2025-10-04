@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html">My Books</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="myprogress.html">My Progress</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="profile.html" class="active"><i class="fas fa-user-circle profile-icon"></i></a></li> <!-- Active link for Profile -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page-content">
+        <h1 class="page-main-heading">My Profile</h1>
+
+        <section class="profile-card">
+            <div class="profile-header-area">
+                <img src="img/profile.png" alt="User Profile Picture" class="profile-picture">
+                <div class="profile-details-summary">
+                    <h2>Matilda Wormwood</h2>
+                    <p class="profile-username">@matildawonders</p>
+                    <p class="profile-email">matilda.w@example.com</p>
+                    <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-bio-section">
+                <h3>About Me</h3>
+                <p>Avid reader of fantasy and non-fiction. Always looking for my next great adventure between the pages. Love discussing plot twists and character development!</p>
+            </div>
+        </section>
+
+        <section class="profile-stats-grid">
+            <div class="stat-box">
+                <i class="fas fa-fire-alt stat-icon"></i>
+                <h4>Reading Streak</h4>
+                <p class="stat-value">4 Days</p>
+                <a href="myprogress.html" class="stat-link">View Progress <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-trophy stat-icon"></i>
+                <h4>Badges Earned</h4>
+                <p class="stat-value">6</p>
+                <a href="#" class="stat-link">View Badges <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-gem stat-icon"></i>
+                <h4>Community Points</h4>
+                <p class="stat-value">1250</p>
+                <a href="#" class="stat-link">How to Earn? <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section class="profile-badges-section">
+            <h3>My Badges</h3>
+            <div class="badges-container">
+                <div class="badge-item">
+                    <img src="img/badge/badge-early-bird.png" alt="Early Bird Badge">
+                    <p>Early Bird Reader</p>
+                </div>
+                <div class="badge-item">
+                    <img src="img/badge/badge-first-read.png" alt="First Read Badge">
+                    <p>First Read</p>
+                </div>
+                <div class="badge-item">
+                    <img src="img/badge/badge-genre-master.png" alt="Genre Master Badge">
+                    <p>Fantasy Fanatic</p>
+                </div>
+                <div class="badge-item">
+                    <img src="img/badge/badge-socialite.png" alt="Socialite Badge">
+                    <p>Community Builder</p>
+                </div>
+                 <div class="badge-item locked">
+                    <img src="img/badge/badge-locked-mystery.png" alt="Locked Badge">
+                    <p>Mystery Reader</p>
+                </div>
+                <div class="badge-item locked">
+                    <img src="img/badge/badge-locked-bookworm.png" alt="Locked Badge">
+                    <p>Bookworm Pro</p>
+                </div>
+            </div>
+             <button class="view-all-button">View All Badges</button>
+        </section>
+
+        <section class="profile-actions-section">
+            <h3>Account Actions</h3>
+            <button class="action-btn sign-out-btn"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+            <button class="action-btn logout-btn"><i class="fas fa-power-off"></i> Log Out of All Devices</button>
+            <button class="action-btn delete-account-btn"><i class="fas fa-trash-alt"></i> Delete Account</button>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a> <!-- Replace with your actual logo image if desired -->
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html">My Books</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="myprogress.html">My Progress</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle profile-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="homepage-content">
+        <aside class="left-panel">
+            <div class="book-of-the-month">
+                <h3>Book of the Month</h3>
+                <div class="botm-cover">
+                    <img src="img/bom.jpeg" alt="Book of the Month Cover">
+                    <p class="botm-title">How Business Story Telling Works</p>
+                    <p class="botm-author">Sandeep Das</p>
+                </div>
+            </div>
+            <div class="my-books-links">
+                <h3>My Reading Journey</h3>
+                <ul>
+                    <li><a href="mybooks.html#current-reading">Current Reading</a></li>
+                    <li><a href="mybooks.html#to-be-read">To Be Read</a></li>
+                    <li><a href="mybooks.html#done-reading">Done Reading</a></li>
+                </ul>
+            </div>
+        </aside>
+
+<section class="main-books-display">
+            <h2>Explore Books</h2>
+            <div class="scrollable-books-container">
+                <!-- Example Book Cards - these would typically be dynamically loaded -->
+                <a href="book-details.html?bookId=1" class="book-card"> <!-- Added an 'a' tag around the card -->
+                    <img src="img/b1.jpg" alt="Book 1 Cover">
+                    <p class="book-title">The Psychology of Money</p>
+                    <p class="book-author">Morgan Housel</p>
+                </a>
+                <div class="book-card">
+                    <img src="img/b2.jpg" alt="Book 2 Cover">
+                    <p class="book-title">Rich Dad Poor Dad</p>
+                    <p class="book-author">Robert Kiyosaki</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b3.jpg" alt="Book 3 Cover">
+                    <p class="book-title">The 5 Types of Wealth</p>
+                    <p class="book-author">Sahil Bloom</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b4.jpg" alt="Book 4 Cover">
+                    <p class="book-title">Women living deliciously</p>
+                    <p class="book-author">Florence Given</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b5.jpg" alt="Book 5 Cover">
+                    <p class="book-title">Bad Company</p>
+                    <p class="book-author">Megan Greenswell</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b6.jpg" alt="Book 6 Cover">
+                    <p class="book-title">The Simple Path to Wealth</p>
+                    <p class="book-author">JL Collins</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b7.jpg" alt="Book 7 Cover">
+                    <p class="book-title">The Art Book</p>
+                    <p class="book-author">Phaidon</p>
+                </div>
+                <div class="book-card">
+                    <img src="img/b8.jpg" alt="Book 8 Cover">
+                    <p class="book-title">Van Gogh: The Life</p>
+                    <p class="book-author">Philip Hook</p>
+                </div>
+                <!-- Add more book cards as needed -->
+            </div>
+        </section>
+
+        <aside class="right-panel">
+            <div class="community-groups">
+                <h3>My Groups</h3>
+                <ul>
+                    <li><a href="community.html#group1">Fantasy Readers Club</a></li>
+                    <li><a href="community.html#group2">Sci-Fi Explorers</a></li>
+                    <li><a href="community.html#group3">Classic Literature Society</a></li>
+                </ul>
+            </div>
+            <div class="suggested-groups">
+                <h3>Suggested Groups</h3>
+                <ul>
+                    <li><a href="community.html#suggested1">Mystery Solvers</a></li>
+                    <li><a href="community.html#suggested2">Poetry Enthusiasts</a></li>
+                    <li><a href="community.html#suggested3">Young Adult Fiction</a></li>
+                </ul>
+                <button class="view-all-button">View All Groups</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

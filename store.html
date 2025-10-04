@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html">My Books</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="myprogress.html">My Progress</a></li>
+                <li><a href="store.html" class="active">Store</a></li> <!-- Active link for Store -->
+                <li><a href="profile.html"><i class="fas fa-user-circle profile-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="store-page-content">
+        <h1 class="page-main-heading">KitaabiKabins Store</h1>
+
+        <section class="book-comparison-section">
+            <div class="comparison-header">
+                <img src="img/b1.jpg" alt="The Psychology of Money" class="comparison-book-cover">
+                <div class="comparison-book-info">
+                    <h2>The Psychology of Money</h2>
+                    <p class="author">By Morgan Housel</p>
+                    <div class="book-ratings">
+                        <span class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        </span>
+                        <span class="rating-value">4.5/5.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-table">
+                <h3>Compare Prices & Availability</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Availability</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-globe"></i> Amazon.in</td>
+                            <td>Hardcover</td>
+                            <td>₹599</td>
+                            <td class="in-stock">In Stock</td>
+                            <td><a href="#" target="_blank" class="buy-link">Buy Now <i class="fas fa-external-link-alt"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-globe"></i> Flipkart</td>
+                            <td>Paperback</td>
+                            <td>₹480</td>
+                            <td class="in-stock">In Stock</td>
+                            <td><a href="#" target="_blank" class="buy-link">Buy Now <i class="fas fa-external-link-alt"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-globe"></i> BookChor</td>
+                            <td>Used Paperback</td>
+                            <td>₹300</td>
+                            <td class="limited-stock">Limited Stock</td>
+                            <td><a href="#" target="_blank" class="buy-link">Buy Now <i class="fas fa-external-link-alt"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-store"></i> Crossword (Mumbai)</td>
+                            <td>Hardcover</td>
+                            <td>₹650</td>
+                            <td class="in-store">Check In Store</td>
+                            <td><a href="#" target="_blank" class="view-store-link">View Store <i class="fas fa-map-marker-alt"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-store"></i> Title Waves (Goa)</td>
+                            <td>Paperback</td>
+                            <td>₹500</td>
+                            <td class="out-of-stock">Out of Stock</td>
+                            <td><a href="#" target="_blank" class="view-store-link">View Store <i class="fas fa-map-marker-alt"></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="disclaimer">Prices and availability are subject to change. Last updated: Sep 8, 2023.</p>
+            </div>
+        </section>
+
+        <section class="store-section mystery-boxes-section">
+            <h2 class="section-title"><i class="fas fa-box"></i> Mystery Book Boxes</h2>
+            <p class="section-description">Unwrap the joy of a surprise read! Each box contains hand-picked books and goodies based on a theme.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/mystery-box-bronze.jpg" alt="Bronze Mystery Box">
+                    <h3>Bronze Box</h3>
+                    <p class="price">₹500</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 1 New Paperback</li>
+                        <li><i class="fas fa-check-circle"></i> 1 KitaabiKabins Bookmark</li>
+                    </ul>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/mystery-box-silver.jpg" alt="Silver Mystery Box">
+                    <h3>Silver Box</h3>
+                    <p class="price">₹1000</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 1 New Hardcover/2 Paperbacks</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive KitaabiKabins Bookmark</li>
+                        <li><i class="fas fa-check-circle"></i> Themed Collectible</li>
+                    </ul>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/mystery-box-gold.jpg" alt="Gold Mystery Box">
+                    <h3>Gold Box</h3>
+                    <p class="price">₹1500</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 2 New Hardcovers/3 Paperbacks</li>
+                        <li><i class="fas fa-check-circle"></i> Deluxe KitaabiKabins Bookmark Set</li>
+                        <li><i class="fas fa-check-circle"></i> High-Quality Themed Merchandise</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized Note</li>
+                    </ul>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="store-section bookmarks-section">
+            <h2 class="section-title"><i class="fas fa-bookmark"></i> Exclusive Bookmarks</h2>
+            <p class="section-description">Never lose your page again with our beautifully designed KitaabiKabins bookmarks.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="img/bookmarks/bookmark-1.png" alt="Petals and Prose Bookmark">
+                    <h3>Petals and Prose</h3>
+                    <p class="price">₹119</p>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bookmarks/bookmark-2.png" alt="Radiant Reads Bookmark">
+                    <h3>Radiant Reads</h3>
+                    <p class="price">₹129</p>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bookmarks/bookmark-3.png" alt="Abstracta Bookmark">
+                    <h3>Abstracta</h3>
+                    <p class="price">₹99</p>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/bookmarks/bookmark-4.png" alt="Golden Bloom Bookmark">
+                    <h3>Golden Bloom</h3>
+                    <p class="price">₹79</p>
+                    <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

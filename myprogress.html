@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - My Progress</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html">My Books</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="myprogress.html" class="active">My Progress</a></li> <!-- Active link for My Progress -->
+                <li><a href="store.html">Store</a></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle profile-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="myprogress-page-content">
+        <aside class="progress-left-panel">
+            <div class="progress-calendar-container">
+                <!-- MODIFIED: Wrapped month and year in a span for better styling control -->
+                <h3><span>September 2023</span> <i class="fas fa-calendar-alt"></i></h3>
+                <div class="calendar-grid">
+                    <div class="calendar-day day-name">Mon</div>
+                    <div class="calendar-day day-name">Tue</div>
+                    <div class="calendar-day day-name">Wed</div>
+                    <div class="calendar-day day-name">Thu</div>
+                    <div class="calendar-day day-name">Fri</div>
+                    <div class="calendar-day day-name">Sat</div>
+                    <div class="calendar-day day-name">Sun</div>
+                    
+                    <!-- Calendar Days - September 2023 (Example) -->
+                    <!-- Filler days from previous month -->
+                    <div class="calendar-day inactive">28</div>
+                    <div class="calendar-day inactive">29</div>
+                    <div class="calendar-day inactive">30</div>
+                    <div class="calendar-day inactive">31</div>
+                    
+                    <!-- September 1 - 30 -->
+                    <div class="calendar-day read-day">1 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day read-day">2 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day read-day">3 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day read-day">5 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day read-day">6 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day read-day">7 <i class="fas fa-book"></i></div>
+                    <div class="calendar-day current-day read-day">8 <i class="fas fa-book"></i></div> <!-- Today -->
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day">15</div>
+                    <div class="calendar-day">16</div>
+                    <div class="calendar-day">17</div>
+                    <div class="calendar-day">18</div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                </div>
+            </div>
+
+            <div class="streak-summary">
+                <h3>Streaks</h3>
+                <p>Current Streak: <span class="streak-value">4 days</span></p>
+                <p>Longest Streak: <span class="streak-value">12 days</span></p>
+            </div>
+        </aside>
+
+        <section class="progress-main-streak">
+            <i class="fas fa-book-reader main-streak-icon"></i>
+            <p class="current-streak-big">Your Streak:</p>
+            <p class="streak-number-big">4</p>
+            <p class="streak-label-big">Days</p>
+            <button class="share-streak-btn"><i class="fas fa-share-alt"></i> Share Your Progress</button>
+        </section>
+
+        <aside class="progress-right-panel">
+            <h3>Reading Insights <i class="fas fa-chart-bar"></i></h3>
+            <div class="stat-card">
+                <h4>Books Finished This Month</h4>
+                <p class="stat-value">3</p>
+            </div>
+            <div class="stat-card">
+                <h4>Total Pages Read</h4>
+                <p class="stat-value">850</p>
+            </div>
+            <div class="stat-card">
+                <h4>Favorite Genre</h4>
+                <p class="stat-value">Non-Fiction</p>
+            </div>
+            <div class="chart-container">
+                <h4>Pages Read by Day (Past Week)</h4>
+                <img src="img/bar.jpg" alt="Pages Read by Day Chart" class="placeholder-chart">
+            </div>
+            <div class="chart-container">
+                <h4>Genre Distribution</h4>
+                <img src="img/pie.jpg" alt="Genre Distribution Chart" class="placeholder-chart">
+            </div>
+             <div class="stat-card">
+                <h4>Average Books per Month</h4>
+                <p class="stat-value">2.5</p>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

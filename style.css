@@ -1,0 +1,2469 @@
+/* UPDATED COLOR PALETTE AND STYLING FOR VIBRANCY */
+:root {
+    --primary-brown: #5A3A2D; /* Deeper, richer brown for text and strong accents */
+    --secondary-brown: #7B5C4E; /* A warmer, medium brown */
+    --tertiary-brown: #A08375; /* A softer, inviting brown for lighter accents/hovers */
+    
+    --light-beige: #FCF8F3; /* Brighter, warmer off-white/beige for backgrounds */
+    --dark-beige: #EDE5D8; /* Slightly deeper, more saturated beige for panels */
+    --accent-gold: #C29A70; /* A warm, subtle gold-ish accent for highlights/hover */
+
+    --text-color-dark: #332211; /* Darker, richer text for better contrast */
+    --text-color-light: #5C4A3F; /* Lighter text for secondary info */
+
+    --border-color: #D4C9BD; /* More defined but still soft border */
+    --shadow-light: rgba(0,0,0,0.1); /* Lighter, broader shadow for depth */
+    --shadow-medium: rgba(0,0,0,0.15); /* More pronounced shadow */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-beige); /* Brighter background */
+    color: var(--text-color-dark); /* Richer text color */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-brown); /* Deeper brown for links */
+    transition: color 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+a:hover {
+    color: var(--accent-gold); /* Warm accent on hover */
+    transform: translateY(-1px); /* Subtle lift on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2, h3 {
+    color: var(--primary-brown); /* Deeper brown for headings */
+    margin-bottom: 15px;
+    font-weight: 600; /* Slightly bolder headings */
+    letter-spacing: 0.5px; /* A little more space for headings */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-beige); /* More saturated header background */
+    padding: 3px 30px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow-light); /* More prominent header shadow */
+}
+
+.header-left .logo {
+    font-size: 1.9em; /* Slightly larger logo text */
+    font-weight: bold;
+    color: var(--primary-brown);
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px; /* Slightly more space between nav items */
+}
+
+.navbar a {
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    color: var(--text-color-light); /* Lighter text for navbar items */
+}
+
+.navbar a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px; /* Thicker underline */
+    background-color: var(--accent-gold); /* Accent gold underline on hover */
+    transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navbar a.active::after { /* For highlighting current page (add this class in HTML for current page) */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-brown);
+}
+
+.profile-icon {
+    font-size: 1.6em; /* Slightly larger profile icon */
+    color: var(--primary-brown); /* Deeper color for icon */
+}
+
+/* Main Content Layout */
+.homepage-content {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px; /* Slightly wider side panels */
+    gap: 40px; /* Increased gap for breathing room */
+    padding: 40px; /* More padding around content */
+    max-width: 1300px; /* Wider max width */
+    margin: 25px auto; /* More margin */
+}
+
+/* Left and Right Panels */
+.left-panel, .right-panel {
+    background-color: var(--dark-beige); /* More saturated panel background */
+    padding: 25px; /* More padding inside panels */
+    border-radius: 10px; /* Softer rounded corners */
+    box-shadow: 0 5px 15px var(--shadow-light); /* Deeper, softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.left-panel:hover, .right-panel:hover {
+    transform: translateY(-3px); /* Subtle lift on panel hover */
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.left-panel h3, .right-panel h3 {
+    border-bottom: 2px solid var(--border-color); /* Thicker border for headings */
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+.left-panel ul li, .right-panel ul li {
+    margin-bottom: 12px; /* More space between list items */
+}
+
+/* Book of the Month */
+.book-of-the-month {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.botm-cover img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px; /* Softer border radius */
+    box-shadow: 0 6px 15px var(--shadow-medium); /* More pronounced shadow */
+    margin-bottom: 15px;
+}
+
+.botm-title {
+    font-weight: bold;
+    margin: 8px 0;
+    font-size: 1.1em; /* Slightly larger title */
+    color: var(--primary-brown);
+}
+
+.botm-author {
+    font-style: italic;
+    color: var(--text-color-light); /* Lighter text color */
+    font-size: 0.9em;
+}
+
+/* My Books Links */
+.my-books-links ul li a {
+    display: block;
+    padding: 10px 15px; /* More padding */
+    background-color: var(--light-beige); /* Brighter background for links */
+    border-radius: 6px; /* Softer corners */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for each link */
+}
+
+.my-books-links ul li a:hover {
+    background-color: var(--tertiary-brown); /* Softer brown on hover */
+    color: white; /* White text on hover for contrast */
+    transform: translateX(5px); /* Slide effect on hover */
+}
+
+/* Main Books Display (Scrollable) */
+.main-books-display {
+    background-color: var(--dark-beige);
+    padding: 30px; /* More padding */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light); /* Consistent shadow */
+}
+
+.scrollable-books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Slightly larger book cards */
+    gap: 25px; /* More space between cards */
+    max-height: 650px; /* Adjusted height */
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
+.scrollable-books-container::-webkit-scrollbar {
+    width: 10px; /* Thicker scrollbar */
+}
+
+.scrollable-books-container::-webkit-scrollbar-track {
+    background: var(--dark-beige); /* Scroll track matches panel background */
+    border-radius: 10px;
+}
+
+.scrollable-books-container::-webkit-scrollbar-thumb {
+    background: var(--secondary-brown); /* Warmer scroll thumb */
+    border-radius: 10px;
+}
+
+.scrollable-books-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-brown);
+}
+
+
+.book-card {
+    text-align: center;
+    padding: 15px; /* More padding */
+    background-color: var(--light-beige); /* Brighter card background */
+    border-radius: 8px; /* Softer corners */
+    box-shadow: 0 4px 10px var(--shadow-light); /* More depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px) scale(1.03); /* More pronounced lift and slight scale */
+    box-shadow: 0 8px 18px var(--shadow-medium); /* Stronger shadow on hover */
+}
+
+.book-card img {
+    max-width: 100%;
+    height: 180px; /* Taller book covers */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.book-card .book-title {
+    font-weight: bold;
+    font-size: 1em; /* Slightly larger title */
+    margin-bottom: 5px;
+    color: var(--primary-brown);
+}
+
+.book-card .book-author {
+    font-size: 0.85em; /* Slightly larger author text */
+    color: var(--text-color-light);
+}
+
+/* Community Panel */
+.community-groups ul li a,
+.suggested-groups ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--light-beige);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.community-groups ul li a:hover,
+.suggested-groups ul li a:hover {
+    background-color: var(--tertiary-brown);
+    color: white;
+    transform: translateX(5px);
+}
+
+.view-all-button {
+    display: block;
+    width: 100%;
+    padding: 12px 15px; /* More padding */
+    background-color: var(--primary-brown); /* Deeper brown button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.05em; /* Slightly larger text */
+    margin-top: 25px; /* More margin */
+    box-shadow: 0 4px 10px var(--shadow-light); /* Button shadow */
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.view-all-button:hover {
+    background-color: var(--secondary-brown); /* Warmer brown on hover */
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 6px 15px var(--shadow-medium); /* Stronger shadow on hover */
+}
+
+/* --- Book Details Page Specific Styles --- */
+
+.book-detail-page-content {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    max-width: 1000px; /* Slightly wider than homepage main content */
+    margin: 25px auto;
+    background-color: var(--dark-beige);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.book-details-container {
+    display: flex;
+    gap: 40px; /* Space between cover and info */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.book-cover-section {
+    flex: 0 0 300px; /* Fixed width for the cover section */
+    text-align: center;
+    padding-right: 20px; /* Add some padding on the right */
+    border-right: 1px solid var(--border-color); /* Subtle separator */
+}
+
+.detail-book-cover {
+    max-width: 100%;
+    height: auto;
+    min-height: 400px; /* Ensure a consistent height for the cover image */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 8px;
+    box-shadow: 0 8px 20px var(--shadow-medium); /* More prominent shadow for the main cover */
+    margin-bottom: 25px;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.action-button i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.want-to-read {
+    background-color: var(--secondary-brown);
+    color: white;
+}
+
+.want-to-read:hover {
+    background-color: var(--primary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px var(--shadow-medium);
+}
+
+.buy-book {
+    background-color: var(--accent-gold);
+    color: var(--text-color-dark); /* Darker text for contrast on gold */
+}
+
+.buy-book:hover {
+    background-color: #D4AF37; /* Slightly darker gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px var(--shadow-medium);
+}
+
+.book-info-section {
+    flex: 1; /* Take up remaining space */
+    padding-left: 20px; /* Add some padding on the left */
+}
+
+.book-title-detail {
+    font-size: 2.5em; /* Larger title */
+    margin-bottom: 8px;
+    color: var(--primary-brown);
+    line-height: 1.2;
+}
+
+.book-author-detail {
+    font-size: 1.4em;
+    font-style: italic;
+    color: var(--text-color-light);
+    margin-bottom: 20px;
+}
+
+.book-ratings {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-ratings .stars {
+    color: var(--accent-gold); /* Gold stars */
+    font-size: 1.3em;
+}
+
+.book-ratings .rating-value {
+    font-weight: bold;
+    color: var(--primary-brown);
+    font-size: 1.1em;
+}
+
+.book-ratings .review-count {
+    color: var(--text-color-light);
+    font-size: 0.95em;
+}
+
+.section-heading {
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--secondary-brown); /* Softer heading color */
+    border-bottom: 1px solid var(--border-color); /* Underline for sections */
+    padding-bottom: 8px;
+}
+
+.book-description {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.additional-info {
+    padding-left: 20px; /* Indent the list */
+}
+
+.additional-info li {
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.additional-info li strong {
+    color: var(--primary-brown); /* Emphasize labels */
+}
+
+/* Responsive Adjustments for Book Details Page */
+@media (max-width: 900px) {
+    .book-details-container {
+        flex-direction: column; /* Stack cover and info vertically */
+        align-items: center; /* Center items when stacked */
+        gap: 30px;
+    }
+
+    .book-cover-section {
+        flex: 0 0 auto; /* Allow cover section to shrink/grow */
+        width: 80%; /* Occupy more width on smaller screens */
+        max-width: 300px; /* But keep a max width */
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color); /* Add a bottom border */
+        padding-bottom: 30px;
+    }
+
+    .book-info-section {
+        padding-left: 0;
+        text-align: center; /* Center text when stacked */
+    }
+
+    .book-title-detail {
+        font-size: 2em;
+    }
+
+    .book-author-detail {
+        font-size: 1.2em;
+    }
+
+    .section-heading {
+        text-align: center; /* Center section headings */
+    }
+
+    .additional-info {
+        padding-left: 0; /* Remove indent for stacked list */
+        text-align: left; /* Keep list items left-aligned within their container */
+    }
+}
+
+@media (max-width: 500px) {
+    .book-detail-page-content {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .detail-book-cover {
+        min-height: 300px;
+    }
+
+    .action-button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .book-title-detail {
+        font-size: 1.8em;
+    }
+
+    .book-author-detail {
+        font-size: 1.1em;
+    }
+
+    .book-description {
+        font-size: 1em;
+    }
+}
+
+/* --- Community Page Specific Styles (WhatsApp-like) --- */
+
+.community-page-content {
+    display: flex;
+    max-width: 1400px; /* Slightly wider for the chat interface */
+    margin: 25px auto;
+    border-radius: 10px;
+    overflow: hidden; /* Important for containing chat background */
+    box-shadow: 0 8px 25px var(--shadow-medium); /* More pronounced shadow for the whole page */
+    height: calc(100vh - 140px); /* Fill most of the viewport height, adjusting for header/margins */
+    background-color: var(--light-beige); /* Base background for the entire community module */
+}
+
+/* Community Left Panel (Sidebar) */
+.community-left-panel {
+    flex: 0 0 350px; /* Fixed width, slightly wider than homepage panel */
+    background-color: var(--dark-beige);
+    border-right: 1px solid var(--border-color);
+    padding: 20px 0; /* Padding only top/bottom */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allow scrolling for groups */
+}
+
+.community-left-panel h3 {
+    padding: 0 20px; /* Match padding of search bar for alignment */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    color: var(--primary-brown);
+}
+
+.community-left-panel .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--light-beige);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.community-left-panel .search-bar input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 0.95em;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background-color: white;
+}
+
+.community-left-panel .search-bar input:focus {
+    border-color: var(--accent-gold);
+}
+
+.community-left-panel .search-bar i {
+    margin-left: 10px;
+    color: var(--text-color-light);
+    font-size: 1.1em;
+}
+
+.community-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.group-item:hover {
+    background-color: var(--light-beige);
+}
+
+.group-item.active-group {
+    background-color: var(--tertiary-brown);
+    color: white;
+}
+
+.group-item.active-group .group-name,
+.group-item.active-group .last-message,
+.group-item.active-group .message-time {
+    color: white; /* Ensure text is white in active group */
+}
+
+
+.group-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.group-item.active-group .group-avatar {
+    border-color: white; /* White border for active avatar */
+}
+
+.group-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.group-name {
+    font-weight: bold;
+    font-size: 1.05em;
+    color: var(--primary-brown);
+    margin-bottom: 3px;
+}
+
+.group-item.active-group .group-name {
+    color: white;
+}
+
+.last-message {
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Limit width to prevent overflow */
+}
+
+.message-time {
+    font-size: 0.8em;
+    color: var(--text-color-light);
+    position: absolute; /* Position time on the right */
+    top: 15px;
+    right: 20px;
+}
+
+.join-group-btn {
+    background-color: var(--accent-gold);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.join-group-btn:hover {
+    background-color: #D4AF37;
+}
+
+.community-left-panel .view-all-button {
+    margin: 25px auto 20px auto; /* Center button and add more vertical space */
+    width: calc(100% - 40px); /* Adjust width to account for panel padding */
+    max-width: 250px; /* Max width for button */
+}
+
+/* Chat Area (Main Content) */
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/chat-background.png'); /* Placeholder chat background */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.chat-area::before { /* Overlay for better text readability on background image */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Light overlay */
+    z-index: 0;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--dark-beige);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px var(--shadow-light);
+    z-index: 1; /* Ensure header is above overlay */
+}
+
+.chat-group-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.chat-header-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-group-name {
+    font-weight: bold;
+    font-size: 1.15em;
+    color: var(--primary-brown);
+    margin-bottom: 2px;
+}
+
+.chat-group-members {
+    font-size: 0.85em;
+    color: var(--text-color-light);
+}
+
+.chat-header-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.chat-header-actions i {
+    font-size: 1.3em;
+    color: var(--text-color-light);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.chat-header-actions i:hover {
+    color: var(--primary-brown);
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1; /* Ensure messages are above overlay */
+}
+
+.message {
+    display: flex;
+    align-items: flex-end; /* Align avatars to bottom of message */
+    max-width: 70%; /* Limit message width */
+    position: relative;
+}
+
+.message-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    align-self: flex-start; /* Align avatar to top of content */
+}
+
+.message-content {
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.message-content p {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+}
+
+.message-sender {
+    font-weight: bold;
+    font-size: 0.85em;
+    color: var(--secondary-brown);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.message-timestamp {
+    font-size: 0.75em;
+    color: var(--text-color-light);
+    margin-top: 5px;
+    text-align: right;
+    display: block;
+}
+
+.message.received .message-content {
+    border-bottom-left-radius: 2px; /* Pointed corner */
+    background-color: #E2F0CB; /* Light green for received */
+    margin-left: 0; /* Aligns to the left */
+}
+
+.message.received .message-avatar {
+    order: -1; /* Place avatar to the left */
+}
+
+
+.message.sent {
+    align-self: flex-end; /* Push sent messages to the right */
+}
+
+.message.sent .message-content {
+    background-color: var(--accent-gold); /* Gold for sent messages */
+    color: var(--text-color-dark);
+    border-bottom-right-radius: 2px; /* Pointed corner */
+}
+
+.message.sent .message-timestamp {
+    color: rgba(0,0,0,0.6); /* Slightly darker timestamp for contrast on gold */
+}
+
+/* Chat Input Area */
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--dark-beige);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -2px 5px var(--shadow-light);
+    z-index: 1; /* Ensure input area is above overlay */
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1em;
+    outline: none;
+    margin: 0 10px;
+    transition: border-color 0.2s ease;
+    background-color: white;
+}
+
+.chat-input-area input:focus {
+    border-color: var(--primary-brown);
+}
+
+.chat-action-btn {
+    background: none;
+    border: none;
+    color: var(--text-color-light);
+    font-size: 1.4em;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-action-btn:hover {
+    color: var(--primary-brown);
+    background-color: rgba(0,0,0,0.05);
+}
+
+.chat-action-btn.send-btn {
+    color: white;
+    background-color: var(--primary-brown);
+    margin-left: 10px;
+    box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+.chat-action-btn.send-btn:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) - Chat Messages */
+.chat-messages::-webkit-scrollbar,
+.community-left-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track,
+.community-left-panel::-webkit-scrollbar-track {
+    background: transparent; /* Make track transparent for subtle look */
+}
+
+.chat-messages::-webkit-scrollbar-thumb,
+.community-left-panel::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent thumb */
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover,
+.community-left-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments for Community Page */
+@media (max-width: 900px) {
+    .community-page-content {
+        flex-direction: column; /* Stack panels vertically */
+        height: auto; /* Allow content to dictate height */
+        margin: 15px auto;
+    }
+
+    .community-left-panel {
+        flex: 0 0 auto;
+        width: 100%; /* Take full width */
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 400px; /* Limit height for group list on smaller screens */
+    }
+
+    .chat-area {
+        height: 70vh; /* Give chat area a fixed height */
+    }
+
+    .message {
+        max-width: 85%; /* Allow messages to be wider */
+    }
+}
+
+@media (max-width: 600px) {
+    .community-left-panel .search-bar,
+    .group-item,
+    .chat-header,
+    .chat-input-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .group-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .group-name {
+        font-size: 1em;
+    }
+
+    .last-message {
+        font-size: 0.8em;
+    }
+
+    .message-time {
+        right: 15px;
+    }
+
+    .chat-group-avatar {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .chat-group-name {
+        font-size: 1em;
+    }
+
+    .chat-group-members {
+        font-size: 0.8em;
+    }
+
+    .chat-header-actions {
+        gap: 15px;
+    }
+
+    .chat-messages {
+        padding: 15px 20px;
+    }
+
+    .message-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .message-content {
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+
+    .chat-input-area input {
+        padding: 10px 15px;
+    }
+
+    .chat-action-btn {
+        font-size: 1.2em;
+        padding: 6px;
+    }
+}
+
+/* --- My Books Page Specific Styles --- */
+
+.mybooks-page-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: var(--dark-beige);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.bookshelf-section {
+    margin-bottom: 50px; /* Space between different shelves */
+    position: relative;
+    padding-bottom: 20px; /* Space for the wooden shelf visual */
+}
+
+.bookshelf-heading {
+    font-size: 2.2em;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Space between text and icon */
+    position: relative;
+    z-index: 2; /* Ensure heading is above shelf */
+}
+
+.bookshelf-heading i {
+    color: var(--accent-gold); /* Icon color */
+    font-size: 0.9em; /* Slightly smaller icon relative to text */
+}
+
+.bookshelf-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow books to wrap to the next line if too many */
+    justify-content: center; /* Center books on the shelf */
+    gap: 30px; /* Space between books */
+    padding: 20px 0; /* Vertical padding for the books */
+    position: relative;
+    z-index: 1; /* Books should be on the shelf */
+}
+
+.bookshelf-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px; /* Height of the wooden shelf */
+    background-color: var(--secondary-brown); /* Darker brown for shelf */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2), inset 0 -5px 10px rgba(0,0,0,0.2); /* Shadow for depth */
+    z-index: 0; /* Shelf behind the books */
+}
+
+/* Specific styling for the last bookshelf-section to remove bottom shelf visual */
+.mybooks-page-content > section:last-of-type::after {
+    display: none; /* Remove shelf visual for the last row if you want */
+}
+
+.mybook-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px; /* Fixed width for consistent book size */
+    text-align: center;
+    background-color: var(--light-beige); /* Background for the book card itself */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px; /* Space between cards and the shelf below */
+}
+
+.mybook-card:hover {
+    transform: translateY(-8px) scale(1.03); /* Lift and slight scale on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.mybook-card img {
+    width: 100%;
+    height: 220px; /* Consistent height for book covers */
+    object-fit: cover; /* Crop if needed to fit */
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Shadow on the book cover */
+    margin-bottom: 10px;
+}
+
+.mybook-title {
+    font-weight: bold;
+    font-size: 0.95em;
+    color: var(--primary-brown);
+    margin: 0;
+    line-height: 1.3;
+    min-height: 2.6em; /* Ensure consistent height for titles across cards */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive Adjustments for My Books Page */
+@media (max-width: 900px) {
+    .mybooks-page-content {
+        padding: 25px;
+        margin: 20px auto;
+    }
+
+    .bookshelf-heading {
+        font-size: 1.8em;
+        gap: 10px;
+    }
+
+    .mybook-card {
+        width: 140px; /* Slightly smaller book cards */
+        margin-bottom: 15px;
+    }
+
+    .mybook-card img {
+        height: 190px; /* Adjust cover height */
+    }
+}
+
+@media (max-width: 600px) {
+    .mybooks-page-content {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .bookshelf-heading {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .bookshelf-heading i {
+        font-size: 0.8em;
+    }
+
+    .bookshelf-row {
+        gap: 20px;
+    }
+
+    .mybook-card {
+        width: 120px; /* Even smaller book cards */
+        padding: 8px;
+    }
+
+    .mybook-card img {
+        height: 160px; /* Adjust cover height */
+    }
+
+    .mybook-title {
+        font-size: 0.85em;
+        min-height: 2.4em;
+    }
+
+    .bookshelf-section::after {
+        height: 20px; /* Thinner shelf */
+    }
+}
+
+/* --- My Progress Page Specific Styles --- */
+
+.myprogress-page-content {
+    display: grid;
+    grid-template-columns: 320px 1fr 350px; /* Left panel, main streak, right panel */
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 25px auto;
+    /* Adjust height to fill viewport, consider header/footer if present */
+    height: calc(100vh - 140px);
+    background-color: var(--light-beige);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+    overflow: hidden; /* Important for containing elements within */
+}
+
+/* Left Panel (Calendar and Streaks) */
+.progress-left-panel {
+    background-color: var(--dark-beige);
+    padding: 25px; /* Slightly less padding */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    scrollbar-width: thin; /* Firefox scrollbar */
+    scrollbar-color: var(--secondary-brown) var(--dark-beige); /* Firefox scrollbar */
+}
+.progress-left-panel::-webkit-scrollbar {
+    width: 8px;
+}
+.progress-left-panel::-webkit-scrollbar-track {
+    background: var(--dark-beige);
+    border-radius: 10px;
+}
+.progress-left-panel::-webkit-scrollbar-thumb {
+    background: var(--secondary-brown);
+    border-radius: 10px;
+}
+.progress-left-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-brown);
+}
+
+.progress-left-panel h3 {
+    font-size: 1.8em;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Calendar Specific Styling */
+.progress-calendar-container {
+    width: 100%; /* Take full width of its panel */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Calendar Header - Adjust icon position */
+.progress-calendar-container h3 {
+    justify-content: center; /* Center content */
+    display: flex; /* Enable flex for better control */
+    align-items: center;
+    font-size: 1.8em; /* Match general panel h3 */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.progress-calendar-container h3 span {
+    margin-right: 10px; /* Space between text and icon */
+}
+
+.progress-calendar-container h3 i {
+    font-size: 0.9em; /* Slightly smaller icon */
+    color: var(--accent-gold);
+}
+
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* Tighter gap for calendar days */
+    background-color: white;
+    padding: 10px; /* Less padding inside grid */
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.calendar-day {
+    padding: 8px 3px; /* Smaller padding */
+    text-align: center;
+    font-size: 0.85em; /* Slightly smaller font */
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45px; /* Consistent height for grid cells */
+    color: var(--text-color-dark);
+}
+
+.calendar-day:hover:not(.day-name):not(.inactive) {
+    background-color: var(--tertiary-brown);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-day.day-name {
+    font-weight: bold;
+    color: var(--secondary-brown);
+    background-color: var(--dark-beige); /* Match panel background */
+    height: 30px; /* Shorter height for day names */
+    border-bottom: 1px solid var(--border-color); /* Subtle separator */
+    border-radius: 5px; /* Keep consistent corner radius */
+}
+
+.calendar-day.inactive {
+    color: var(--text-color-light);
+    opacity: 0.5; /* More faded */
+    cursor: not-allowed;
+}
+
+.calendar-day.read-day {
+    background-color: var(--accent-gold);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.calendar-day.read-day i.fa-book {
+    font-size: 0.7em; /* Smaller book icon */
+    margin-top: 3px;
+    color: rgba(255,255,255,0.8);
+}
+
+.calendar-day.current-day {
+    border: 2px solid var(--primary-brown);
+    box-shadow: 0 0 0 2px rgba(90, 58, 45, 0.4); /* Stronger indicator for current day */
+    transform: scale(1.05); /* Slightly bigger to stand out */
+}
+
+.calendar-day.current-day.read-day {
+    border: 2px solid white; /* White border for current day if it's also a read day */
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.6);
+}
+
+.streak-summary {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-top: 30px; /* Space from calendar */
+}
+
+.streak-summary h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--primary-brown);
+    display: block; /* Override flex behavior from parent h3 */
+}
+
+.streak-summary p {
+    font-size: 1.05em;
+    color: var(--text-color-dark);
+    margin: 8px 0;
+}
+
+.streak-value {
+    font-weight: bold;
+    color: var(--primary-brown);
+}
+
+/* Middle Section (Main Streak Display) */
+.progress-main-streak {
+    background-color: var(--tertiary-brown);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.progress-main-streak:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow-medium);
+}
+
+.main-streak-icon {
+    font-size: 8em;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    text-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.current-streak-big {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.streak-number-big {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    text-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.streak-label-big {
+    font-size: 2em;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.share-streak-btn {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: var(--primary-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.share-streak-btn:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Right Panel (Charts and Stats) */
+.progress-right-panel {
+    background-color: var(--dark-beige);
+    padding: 25px; /* Slightly less padding */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    scrollbar-width: thin; /* Firefox scrollbar */
+    scrollbar-color: var(--secondary-brown) var(--dark-beige); /* Firefox scrollbar */
+}
+.progress-right-panel::-webkit-scrollbar {
+    width: 8px;
+}
+.progress-right-panel::-webkit-scrollbar-track {
+    background: var(--dark-beige);
+    border-radius: 10px;
+}
+.progress-right-panel::-webkit-scrollbar-thumb {
+    background: var(--secondary-brown);
+    border-radius: 10px;
+}
+.progress-right-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-brown);
+}
+
+
+.progress-right-panel h3 {
+    font-size: 1.8em;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.stat-card h4 {
+    font-size: 1.3em;
+    color: var(--secondary-brown);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--primary-brown);
+}
+
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chart-container h4 {
+    font-size: 1.3em;
+    color: var(--secondary-brown);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.placeholder-chart {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments for My Progress Page */
+@media (max-width: 1200px) {
+    .myprogress-page-content {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        padding: 30px;
+        gap: 30px; /* Slightly less gap on smaller screens */
+    }
+
+    .progress-main-streak {
+        grid-column: 1 / -1;
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .progress-left-panel, .progress-right-panel {
+        max-height: none;
+        overflow-y: visible; /* Don't force scrollbar when stacked */
+        scrollbar-width: auto;
+        scrollbar-color: auto;
+    }
+    .progress-left-panel::-webkit-scrollbar,
+    .progress-right-panel::-webkit-scrollbar {
+        display: none; /* Hide scrollbar when not needed */
+    }
+}
+
+@media (max-width: 800px) {
+    .myprogress-page-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 25px; /* Even less gap */
+    }
+
+    .progress-main-streak {
+        padding: 25px;
+        margin-bottom: 0;
+    }
+
+    .main-streak-icon {
+        font-size: 6em;
+    }
+
+    .streak-number-big {
+        font-size: 5em;
+    }
+
+    .streak-label-big {
+        font-size: 1.8em;
+    }
+
+    .share-streak-btn {
+        font-size: 1em;
+        padding: 12px 25px;
+        margin-top: 30px;
+    }
+
+    .progress-left-panel, .progress-right-panel {
+        padding: 20px;
+    }
+
+    .progress-left-panel h3, .progress-right-panel h3 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+
+    .calendar-day {
+        font-size: 0.8em;
+        height: 40px; /* Adjust height again */
+    }
+
+    .calendar-day.day-name {
+        height: 25px;
+    }
+
+    .streak-summary h3, .stat-card h4, .chart-container h4 {
+        font-size: 1.2em;
+    }
+
+    .stat-value {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .myprogress-page-content {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .progress-left-panel, .progress-right-panel {
+        padding: 15px;
+    }
+
+    .progress-left-panel h3, .progress-right-panel h3 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    .calendar-grid {
+        padding: 10px;
+        gap: 4px; /* Even smaller gap */
+    }
+
+    .calendar-day {
+        height: 35px; /* Final height adjustment */
+        padding: 6px 2px;
+        font-size: 0.75em;
+    }
+
+    .calendar-day.day-name {
+        height: 20px;
+    }
+
+    .main-streak-icon {
+        font-size: 4.5em; /* Smaller icon */
+    }
+
+    .streak-number-big {
+        font-size: 3.5em; /* Smaller number */
+    }
+
+    .streak-label-big {
+        font-size: 1.4em;
+    }
+
+    .share-streak-btn {
+        font-size: 0.85em;
+        padding: 8px 15px;
+        margin-top: 20px;
+    }
+}
+
+/* ADDED STYLES FOR STORE AND PROFILE PAGES */
+
+/* --- Store Page Specific Styles --- */
+.store-page-content {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 40px;
+    background-color: var(--dark-beige);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.page-main-heading {
+    font-size: 2.8em;
+    color: var(--primary-brown);
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-gold);
+    letter-spacing: 1px;
+}
+
+/* Book Comparison Section */
+.book-comparison-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    margin-bottom: 50px;
+    text-align: center; /* Center content within the section */
+}
+
+.comparison-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.comparison-book-cover {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.comparison-book-info {
+    text-align: left; /* Keep text left aligned within its container */
+}
+
+.comparison-book-info h2 {
+    font-size: 2em;
+    color: var(--primary-brown);
+    margin-bottom: 5px;
+}
+
+.comparison-book-info .author {
+    font-style: italic;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.comparison-table {
+    margin-top: 30px;
+}
+
+.comparison-table h3 {
+    font-size: 1.6em;
+    color: var(--secondary-brown);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    display: inline-block; /* Make border only as wide as text */
+}
+
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+}
+
+.comparison-table th {
+    background-color: var(--light-beige);
+    font-weight: 600;
+    color: var(--primary-brown);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #F8F4ED; /* Slight alternate row shading */
+}
+
+.comparison-table tbody tr:hover {
+    background-color: var(--dark-beige);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.comparison-table td i {
+    margin-right: 8px;
+    color: var(--secondary-brown);
+}
+
+.in-stock {
+    color: #4CAF50; /* Green */
+    font-weight: bold;
+}
+
+.limited-stock {
+    color: #FFC107; /* Amber/Yellow */
+    font-weight: bold;
+}
+
+.out-of-stock {
+    color: #F44336; /* Red */
+    font-weight: bold;
+}
+
+.in-store {
+    color: var(--primary-brown);
+    font-weight: bold;
+}
+
+.buy-link, .view-store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: var(--primary-brown);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.buy-link:hover, .view-store-link:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-1px);
+}
+
+.disclaimer {
+    font-size: 0.85em;
+    color: var(--text-color-light);
+    margin-top: 25px;
+}
+
+/* General Store Sections (Mystery Boxes, Bookmarks) */
+.store-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2em;
+    color: var(--primary-brown);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.section-title i {
+    color: var(--accent-gold);
+    font-size: 0.9em;
+}
+
+.section-description {
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--dark-beige);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 250px; /* Max height for product images */
+    object-fit: contain; /* Ensure whole image is visible */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.product-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-brown);
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.product-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    width: 100%;
+    max-width: 200px; /* Constrain list width */
+}
+
+.product-card ul li {
+    font-size: 0.9em;
+    color: var(--text-color-dark);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-card ul li i {
+    color: #4CAF50; /* Green checkmark */
+    font-size: 1.1em;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto; /* Push button to bottom */
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments for Store Page */
+@media (max-width: 900px) {
+    .store-page-content {
+        padding: 30px;
+    }
+    .page-main-heading {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+    .comparison-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .comparison-book-info {
+        text-align: center;
+    }
+    .comparison-table table {
+        display: block;
+        overflow-x: auto; /* Make table horizontally scrollable */
+        white-space: nowrap;
+    }
+    .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr {
+        display: block;
+    }
+    .comparison-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .comparison-table tr {
+        border: 1px solid var(--border-color);
+        margin-bottom: 10px;
+        display: grid; /* Use grid for better mobile layout */
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        padding: 10px;
+    }
+    .comparison-table td:before {
+        content: attr(data-label); /* Use data-label for mobile headings */
+        font-weight: bold;
+        display: inline-block;
+        width: 100px; /* Adjust as needed */
+        color: var(--primary-brown);
+    }
+    /* Hide the "Type" and "Link" labels for mobile as they are often clear from content */
+    .comparison-table td:nth-of-type(2):before,
+    .comparison-table td:nth-of-type(5):before {
+        display: none;
+    }
+    .comparison-table td {
+        border: none;
+        text-align: right;
+        padding: 5px 0;
+    }
+    .comparison-table td:first-child {
+        text-align: left;
+    }
+    .section-title {
+        font-size: 1.8em;
+    }
+    .section-description {
+        font-size: 1em;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .store-page-content {
+        padding: 20px;
+    }
+    .page-main-heading {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .comparison-book-cover {
+        width: 120px;
+        height: 160px;
+    }
+    .comparison-book-info h2 {
+        font-size: 1.6em;
+    }
+    .comparison-book-info .author {
+        font-size: 1em;
+    }
+    .comparison-table td:before {
+        width: 80px;
+    }
+    .section-title {
+        font-size: 1.5em;
+        gap: 10px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Stack products vertically */
+    }
+    .product-card {
+        max-width: 300px; /* Constrain card width when stacked */
+        margin: 0 auto; /* Center cards */
+    }
+}
+
+
+/* --- Profile Page Specific Styles --- */
+.profile-page-content {
+    max-width: 900px; /* Slightly narrower than store for a focused look */
+    margin: 25px auto;
+    padding: 40px;
+    background-color: var(--dark-beige);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.profile-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center content within the card */
+}
+
+.profile-header-area {
+    display: flex;
+    flex-direction: column; /* Stack image and details by default */
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.profile-details-summary {
+    text-align: center;
+}
+
+.profile-details-summary h2 {
+    font-size: 2.2em;
+    color: var(--primary-brown);
+    margin-bottom: 5px;
+}
+
+.profile-username {
+    font-size: 1.1em;
+    color: var(--text-color-light);
+    margin-bottom: 8px;
+}
+
+.profile-email {
+    font-size: 0.95em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+.edit-profile-btn {
+    background-color: var(--secondary-brown);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-profile-btn:hover {
+    background-color: var(--primary-brown);
+    transform: translateY(-2px);
+}
+
+.profile-bio-section {
+    text-align: left; /* Keep bio text left-aligned */
+}
+
+.profile-bio-section h3 {
+    font-size: 1.6em;
+    color: var(--secondary-brown);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    display: inline-block; /* Make border only as wide as text */
+}
+
+.profile-bio-section p {
+    font-size: 1.05em;
+    color: var(--text-color-dark);
+    line-height: 1.7;
+}
+
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.stat-box {
+    background-color: var(--light-beige);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.stat-box .stat-icon {
+    font-size: 3.5em;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.stat-box h4 {
+    font-size: 1.4em;
+    color: var(--primary-brown);
+    margin-bottom: 8px;
+}
+
+.stat-box .stat-value {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-brown);
+    margin-bottom: 15px;
+}
+
+.stat-box .stat-link {
+    font-size: 0.9em;
+    color: var(--secondary-brown);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-box .stat-link:hover {
+    color: var(--primary-brown);
+    text-decoration: underline;
+}
+
+.profile-badges-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    margin-bottom: 40px;
+    text-align: center; /* Center content within the section */
+}
+
+.profile-badges-section h3 {
+    font-size: 1.8em;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.badges-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Auto-fit badges */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 1; /* Default for earned badges */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.badge-item.locked {
+    opacity: 0.5; /* Fade out locked badges */
+    filter: grayscale(100%); /* Make locked badges grayscale */
+}
+
+.badge-item:hover:not(.locked) {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.badge-item img {
+    width: 80px; /* Size for badges */
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Circular badges */
+    border: 3px solid var(--accent-gold);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.badge-item.locked img {
+    border-color: var(--text-color-light); /* Grey border for locked badges */
+}
+
+.badge-item p {
+    font-size: 0.9em;
+    color: var(--primary-brown);
+    font-weight: 500;
+}
+
+.profile-actions-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    text-align: center;
+}
+
+.profile-actions-section h3 {
+    font-size: 1.8em;
+    color: var(--primary-brown);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px; /* Constrain button width */
+    margin: 0 auto 15px auto; /* Center buttons and provide spacing */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    color: white; /* Default text color for action buttons */
+}
+
+.action-btn i {
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.sign-out-btn {
+    background-color: var(--secondary-brown);
+}
+
+.sign-out-btn:hover {
+    background-color: var(--primary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.logout-btn {
+    background-color: var(--tertiary-brown);
+}
+
+.logout-btn:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+.delete-account-btn {
+    background-color: #F44336; /* Red for delete action */
+}
+
+.delete-account-btn:hover {
+    background-color: #D32F2F; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments for Profile Page */
+@media (max-width: 900px) {
+    .profile-page-content {
+        padding: 30px;
+    }
+    .profile-card {
+        padding: 25px;
+    }
+    .profile-header-area {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+    .profile-details-summary h2 {
+        font-size: 1.8em;
+    }
+    .edit-profile-btn {
+        padding: 8px 15px;
+        font-size: 0.95em;
+    }
+    .profile-bio-section h3 {
+        font-size: 1.4em;
+    }
+    .profile-bio-section p {
+        font-size: 1em;
+    }
+    .profile-stats-grid {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .stat-box {
+        padding: 20px;
+    }
+    .stat-box .stat-icon {
+        font-size: 3em;
+    }
+    .stat-box h4 {
+        font-size: 1.2em;
+    }
+    .stat-box .stat-value {
+        font-size: 1.8em;
+    }
+    .profile-badges-section h3, .profile-actions-section h3 {
+        font-size: 1.6em;
+    }
+    .badges-container {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+    .badge-item img {
+        width: 70px;
+        height: 70px;
+    }
+    .badge-item p {
+        font-size: 0.85em;
+    }
+    .action-btn {
+        padding: 10px 15px;
+        font-size: 1em;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-page-content {
+        padding: 20px;
+    }
+    .profile-card {
+        padding: 20px;
+    }
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+    .profile-details-summary h2 {
+        font-size: 1.6em;
+    }
+    .profile-username {
+        font-size: 1em;
+    }
+    .edit-profile-btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+    .profile-bio-section h3 {
+        font-size: 1.2em;
+    }
+    .profile-bio-section p {
+        font-size: 0.9em;
+    }
+    .profile-stats-grid {
+        grid-template-columns: 1fr; /* Stack stats vertically */
+        gap: 15px;
+    }
+    .stat-box {
+        padding: 15px;
+    }
+    .stat-box .stat-icon {
+        font-size: 2.5em;
+    }
+    .stat-box h4 {
+        font-size: 1.1em;
+    }
+    .stat-box .stat-value {
+        font-size: 1.6em;
+    }
+    .profile-badges-section h3, .profile-actions-section h3 {
+        font-size: 1.4em;
+    }
+    .badges-container {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+    .badge-item img {
+        width: 60px;
+        height: 60px;
+    }
+    .badge-item p {
+        font-size: 0.8em;
+    }
+    .action-btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        max-width: 200px;
+    }
+}
+.logo img{
+    height: 60px;
+}

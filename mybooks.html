@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - My Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html" class="active">My Books</a></li> <!-- Active link for My Books -->
+                <li><a href="community.html">Community</a></li>
+                <li><a href="myprogress.html">My Progress</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle profile-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="mybooks-page-content">
+        <section id="already-read" class="bookshelf-section">
+            <h2 class="bookshelf-heading">Already Read <i class="fas fa-check-circle"></i></h2>
+            <div class="bookshelf-row">
+                <a href="book-details.html?bookId=psychology-of-money" class="mybook-card">
+                    <img src="img/b1.jpg" alt="The Psychology of Money">
+                    <p class="mybook-title">The Psychology of Money</p>
+                </a>
+                <a href="book-details.html?bookId=rich-dad-poor-dad" class="mybook-card">
+                    <img src="img/b2.jpg" alt="Rich Dad Poor Dad">
+                    <p class="mybook-title">Rich Dad Poor Dad</p>
+                </a>
+                <a href="book-details.html?bookId=5-types-of-wealth" class="mybook-card">
+                    <img src="img/b3.jpg" alt="The 5 Types of Wealth">
+                    <p class="mybook-title">The 5 Types of Wealth</p>
+                </a>
+                <a href="book-details.html?bookId=simple-path-to-wealth" class="mybook-card">
+                    <img src="img/b6.jpg" alt="The Simple Path to Wealth">
+                    <p class="mybook-title">The Simple Path to Wealth</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="current-reading" class="bookshelf-section">
+            <h2 class="bookshelf-heading">Currently Reading <i class="fas fa-book-open"></i></h2>
+            <div class="bookshelf-row">
+                <a href="book-details.html?bookId=business-storytelling" class="mybook-card">
+                    <img src="img/bom.jpeg" alt="How Business Storytelling Works">
+                    <p class="mybook-title">How Business Storytelling Works</p>
+                </a>
+                <a href="book-details.html?bookId=bad-company" class="mybook-card">
+                    <img src="img/b5.jpg" alt="Bad Company">
+                    <p class="mybook-title">Bad Company</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="to-be-read" class="bookshelf-section">
+            <h2 class="bookshelf-heading">To Be Read <i class="fas fa-bookmark"></i></h2>
+            <div class="bookshelf-row">
+                <a href="book-details.html?bookId=women-living-deliciously" class="mybook-card">
+                    <img src="img/b4.jpg" alt="Women Living Deliciously">
+                    <p class="mybook-title">Women Living Deliciously</p>
+                </a>
+                <a href="book-details.html?bookId=art-book" class="mybook-card">
+                    <img src="img/b7.jpg" alt="The Art Book">
+                    <p class="mybook-title">The Art Book</p>
+                </a>
+                <a href="book-details.html?bookId=van-gogh" class="mybook-card">
+                    <img src="img/b8.jpg" alt="Van Gogh: The Life">
+                    <p class="mybook-title">Van Gogh: The Life</p>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

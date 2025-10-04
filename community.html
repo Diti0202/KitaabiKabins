@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KitaabiKabins - Community</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt="KitaabiKabins Logo"></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mybooks.html">My Books</a></li>
+                <li><a href="community.html" class="active">Community</a></li> <!-- Active link for Community -->
+                <li><a href="myprogress.html">My Progress</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="profile.html"><i class="fas fa-user-circle profile-icon"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="community-page-content">
+        <aside class="community-left-panel">
+            <div class="search-bar">
+                <input type="text" placeholder="Search groups or start new chat...">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="community-section my-groups">
+                <h3>My Groups</h3>
+                <ul>
+                    <li class="group-item active-group" data-group-id="fantasy-readers">
+                        <img src="img/fantasy.png" alt="Fantasy Readers Club" class="group-avatar">
+                        <div class="group-info">
+                            <span class="group-name">Fantasy Readers Club</span>
+                            <span class="last-message">"Can't wait for the next book!"</span>
+                        </div>
+                        <span class="message-time">10:30 AM</span>
+                    </li>
+                    <li class="group-item" data-group-id="sci-fi-explorers">
+                        <img src="img/sci-fi.png" alt="Sci-Fi Explorers" class="group-avatar">
+                        <div class="group-info">
+                            <span class="group-name">Sci-Fi Explorers</span>
+                            <span class="last-message">"Anyone read 'Dune'?"</span>
+                        </div>
+                        <span class="message-time">Yesterday</span>
+                    </li>
+                    <li class="group-item" data-group-id="classic-lit-society">
+                        <img src="img/classic.png" alt="Classic Literature Society" class="group-avatar">
+                        <div class="group-info">
+                            <span class="group-name">Classic Literature Society</span>
+                            <span class="last-message">"Discussion on 'Pride and Prejudice' this week."</span>
+                        </div>
+                        <span class="message-time">Tuesday</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="community-section suggested-groups">
+                <h3>Suggested Groups</h3>
+                <ul>
+                    <li class="group-item">
+                        <img src="img/mystery.png" alt="Mystery Solvers" class="group-avatar">
+                        <div class="group-info">
+                            <span class="group-name">Mystery Solvers</span>
+                            <span class="last-message">Unraveling the darkest plots.</span>
+                        </div>
+                        <button class="join-group-btn">Join</button>
+                    </li>
+                    <li class="group-item">
+                        <img src="img/poetry.png" alt="Poetry Enthusiasts" class="group-avatar">
+                        <div class="group-info">
+                            <span class="group-name">Poetry Enthusiasts</span>
+                            <span class="last-message">A verse for every feeling.</span>
+                        </div>
+                        <button class="join-group-btn">Join</button>
+                    </li>
+                </ul>
+                <button class="view-all-button">Discover More Groups</button>
+            </div>
+        </aside>
+
+        <section class="chat-area">
+            <div class="chat-header">
+                <img src="img/fantasy.png" alt="Fantasy Readers Club" class="chat-group-avatar">
+                <div class="chat-header-info">
+                    <span class="chat-group-name">Fantasy Readers Club</span>
+                    <span class="chat-group-members">You, Rohan, Shreya, Mridula and +5 others</span>
+                </div>
+                <div class="chat-header-actions">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+            <div class="chat-messages">
+                <div class="message received">
+                    <img src="img/alice.png" alt="Alice" class="message-avatar">
+                    <div class="message-content">
+                        <span class="message-sender">Shreya</span>
+                        <p>Hey everyone! Just finished the latest chapter. What did you all think about the plot twist?</p>
+                        <span class="message-timestamp">10:28 AM</span>
+                    </div>
+                </div>
+                <div class="message sent">
+                    <div class="message-content">
+                        <p>I know, right?! Completely unexpected, I'm still reeling! It totally changed my perspective on a few characters.</p>
+                        <span class="message-timestamp">10:30 AM</span>
+                    </div>
+                </div>
+                <div class="message received">
+                    <img src="img/bob.png" alt="Bob" class="message-avatar">
+                    <div class="message-content">
+                        <span class="message-sender">Rohan</span>
+                        <p>Yeah, I had to re-read that part twice! Brilliant writing though, setting it up so subtly.</p>
+                        <span class="message-timestamp">10:32 AM</span>
+                    </div>
+                </div>
+                <div class="message received">
+                    <img src="img/charlie.png" alt="Charlie" class="message-avatar">
+                    <div class="message-content">
+                        <span class="message-sender">Mridula</span>
+                        <p>I predicted something was coming, but not *that*! Now I'm even more excited for the next book.</p>
+                        <span class="message-timestamp">10:35 AM</span>
+                    </div>
+                </div>
+                 <div class="message sent">
+                    <div class="message-content">
+                        <p>Me too! I've already pre-ordered it. This group makes waiting for releases so much more bearable when we can discuss theories!</p>
+                        <span class="message-timestamp">10:37 AM</span>
+                    </div>
+                </div>
+                <div class="message received">
+                    <img src="img/alice.png" alt="Alice" class="message-avatar">
+                    <div class="message-content">
+                        <span class="message-sender">Shreya</span>
+                        <p>Definitely! And seeing everyone's different interpretations is always the best part.</p>
+                        <span class="message-timestamp">10:40 AM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <button class="chat-action-btn"><i class="fas fa-plus-circle"></i></button>
+                <input type="text" placeholder="Type a message...">
+                <button class="chat-action-btn"><i class="fas fa-smile"></i></button>
+                <button class="chat-action-btn send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
